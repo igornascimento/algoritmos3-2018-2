@@ -15,6 +15,7 @@ public class Lista<T> implements InterfaceLista {
         Node node = new Node(valor);
         node.setNext(head);
         this.head = node;
+        this.tail = node;
         this.size++;
     }
     
@@ -32,9 +33,11 @@ public class Lista<T> implements InterfaceLista {
     }
 
     @Override
-    public void removeFirst() {
+    public Node removeFirst() {
+        Node actual = this.head;
         this.head = this.head.getNext();
         this.size--;
+        return actual;
     }
 
     @Override
@@ -44,9 +47,21 @@ public class Lista<T> implements InterfaceLista {
 
     @Override
     public Object get(int index) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int i = 0;
+        for (Node node = head; node != null; node.getNext()) {
+            if (i == index)
+                return node;
+            i++;
+        }
+        return null;
     }
     
+    public boolean hasNext() {
+        return true;
+    }
     
+    public Node next() {
+        
+    }
     
 }

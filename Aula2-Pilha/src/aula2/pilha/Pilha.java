@@ -1,38 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aula2.pilha;
 
 /**
  *
  * @author Igor Nascimento <igornascimento@gmail.com>
  */
-public class Pilha {
+public class Pilha<T> {
     
     private Node peek;
     private Lista list;
     
-    /**
-     * Group of operations that implements the pile
-     */
+    public Pilha() {
+        this.list = new Lista();
+    }
     
     public void push(T value) {
-        
+        list.addFirst(value);
+        peek = (Node) list.get(0);
     }
     
     public Node<T> pop() {
-        
-        return node;
+        if (list.size() > 0) {
+            return list.removeFirst();
+        }
+        return null;
     }
     
-    public void peek() {
-        
+    public Node peek() {
+        return peek;
     }
     
-    public void isEmpty() {
-        
+    public boolean isEmpty() {
+        return list.size() > 0 || false;
+    }
+    
+    public void print() {
+        while (list.hasNext()) {
+            System.out.println(list.next().toString());
+        }
     }
     
 }

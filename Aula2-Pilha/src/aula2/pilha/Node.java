@@ -14,6 +14,10 @@ public class Node<T> {
         this.next = null;
     }
     
+    public T getValue() {
+        return this.value;
+    }
+    
     public void setNext(Node node) {
         this.next = node;
     }

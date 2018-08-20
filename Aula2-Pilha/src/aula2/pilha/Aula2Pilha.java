@@ -11,7 +11,18 @@ public class Aula2Pilha {
      */
     public static void main(String[] args) {
         
+        Pilha testePilha = new Pilha();
         
+        testePilha.push("abacate");
+        testePilha.push("maça");
+        testePilha.push("pêra");
+        testePilha.push("abacaxi");
+        
+        testePilha.print();
+        
+        testePilha.pop();
+        
+        testePilha.print();
         
     }
     
