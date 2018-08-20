@@ -35,12 +35,8 @@ public class Pilha<T> {
         return list.size() > 0 || false;
     }
     
-    public void print() {
-        Iterator<Node> it = list.getIterator();
-        while (it.hasNext()) {
-            Node node = it.next();
-            System.out.println(node.toString());
-        }
+    public int size() {
+        return list.size();
     }
     
 }

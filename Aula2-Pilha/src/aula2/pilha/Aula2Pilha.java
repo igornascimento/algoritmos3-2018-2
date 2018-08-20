@@ -5,7 +5,7 @@ package aula2.pilha;
  * @author Igor Nascimento
  */
 public class Aula2Pilha {
-
+    
     /**
      * @param args the command line arguments
      */
@@ -18,12 +18,20 @@ public class Aula2Pilha {
         testePilha.push("pêra");
         testePilha.push("abacaxi");
         
-        testePilha.print();
+        printPilha(testePilha);
         
         testePilha.pop();
         
-        testePilha.print();
+        printPilha(testePilha);
         
+    }
+    
+    public static void printPilha(Pilha pilha) {
+        System.out.println("Printando a pilha:");
+        while (pilha.size() > 0) {
+            Node item = pilha.pop();
+            System.out.println("Item: " + item.getValue());
+        }
     }
     
 }
