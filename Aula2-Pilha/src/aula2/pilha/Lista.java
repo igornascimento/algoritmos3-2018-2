@@ -1,5 +1,7 @@
 package aula2.pilha;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Igor Nascimento
@@ -9,6 +11,7 @@ public class Lista<T> implements InterfaceLista {
     private Node head;
     private Node tail;
     private int size = 0;
+    private Iterador it = new Iterador();
     
     @Override
     public void addFirst(Object valor) {
@@ -56,11 +59,25 @@ public class Lista<T> implements InterfaceLista {
         return null;
     }
     
-    public boolean hasNext() {
-        return true;
+    public Iterator getIterator() {
+        return this.it;
     }
     
-    public Node next() {
+    
+    private class Iterador implements Iterator {
+
+        @Override
+        public boolean hasNext() {
+            return this.hasNext();
+        }
+
+        @Override
+        public Object next() {
+            if (this.hasNext()) {
+                return this.next();
+            }
+            return false;
+        }
         
     }
     

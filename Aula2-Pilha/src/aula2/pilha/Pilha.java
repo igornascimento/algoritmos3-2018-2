@@ -1,5 +1,7 @@
 package aula2.pilha;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Igor Nascimento <igornascimento@gmail.com>
@@ -10,7 +12,7 @@ public class Pilha<T> {
     private Lista list;
     
     public Pilha() {
-        this.list = new Lista();
+        this.list = new Lista<T>();
     }
     
     public void push(T value) {
@@ -34,8 +36,10 @@ public class Pilha<T> {
     }
     
     public void print() {
-        while (list.hasNext()) {
-            System.out.println(list.next().toString());
+        Iterator<Node> it = list.getIterator();
+        while (it.hasNext()) {
+            Node node = it.next();
+            System.out.println(node.toString());
         }
     }
     
