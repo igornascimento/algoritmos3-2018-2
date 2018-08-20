@@ -11,7 +11,6 @@ public class Lista<T> implements InterfaceLista {
     private Node head;
     private Node tail;
     private int size = 0;
-    private Iterador it = new Iterador();
     
     @Override
     public void addFirst(Object valor) {
@@ -32,7 +31,7 @@ public class Lista<T> implements InterfaceLista {
 
     @Override
     public void removeLast(Object previous) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //
     }
 
     @Override
@@ -57,28 +56,6 @@ public class Lista<T> implements InterfaceLista {
             i++;
         }
         return null;
-    }
-    
-    public Iterator getIterator() {
-        return this.it;
-    }
-    
-    
-    private class Iterador implements Iterator {
-
-        @Override
-        public boolean hasNext() {
-            return this.hasNext();
-        }
-
-        @Override
-        public Object next() {
-            if (this.hasNext()) {
-                return this.next();
-            }
-            return false;
-        }
-        
     }
     
 }
