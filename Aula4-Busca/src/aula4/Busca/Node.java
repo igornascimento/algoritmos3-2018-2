@@ -34,10 +34,10 @@ public class Node<T> implements NodeInterface {
     }
 
     @Override
-    public boolean equals(int key) {
-        
-        
-        
-        return true;
+    public boolean equals(String key) {
+        if (this.value == key) {
+            return true;
+        }
+        return false;
     }
 }

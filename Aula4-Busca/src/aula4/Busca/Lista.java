@@ -58,4 +58,19 @@ public class Lista<T> implements InterfaceLista {
         return null;
     }
     
+    public Node<T> search(String key) {
+        return this.internalSearch(key, head);
+    }
+    
+    public Node<T> internalSearch(String key, Node node) {
+        if (node.equals(key)) {
+            return node;
+        } else {
+            if (node.hasNext()) {
+                return this.internalSearch(key, node.next());
+            }
+        }
+        return null;
+    }
+    
 }

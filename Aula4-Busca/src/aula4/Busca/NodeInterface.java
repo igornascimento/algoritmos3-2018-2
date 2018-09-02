@@ -10,6 +10,6 @@ package aula4.Busca;
  * @author Igor Nascimento <igornascimento@gmail.com>
  */
 interface NodeInterface<T> {
-    public boolean equals(int key);
+    public boolean equals(String key);
     public Node<T> next();
 }

@@ -15,12 +15,12 @@ public class Aula4Busca {
         
         Lista lista = new Lista();
         
-        lista.append("Igor");
+        lista.addFirst("Igor");
         lista.append("Maria");
         lista.append("João");
         lista.append("Pedro");
         
-        Node resultado = lista.buscar("João");
+        Node resultado = lista.search("João");
         
         System.out.println("Encontrado: " + resultado.getValue());
     }
