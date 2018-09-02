@@ -20,9 +20,9 @@ public class Aula4Busca {
         lista.append("João");
         lista.append("Pedro");
         
-        Node resultado = lista.search("João");
+        Node resultado = lista.search("José");
         
-        System.out.println("Encontrado: " + resultado.getValue());
+        System.out.println("Encontrado: " + (resultado != null ? resultado.getValue() : "nenhum"));
     }
     
 }
