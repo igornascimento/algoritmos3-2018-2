@@ -20,14 +20,12 @@ public class Aula4BuscaBinaria {
     }
     
     public static int buscaRecursiva(int[] array, int inicio, int fim, int valor) {
-        int meio = inicio + fim / 2;
+        int meio = (inicio + fim) / 2;
         int valorMeio = array[meio];
-        if (inicio == fim) {
-            return array[inicio];
-        } else if (inicio > fim) {
+        if (inicio > fim) {
             return -1;
         } else if (valorMeio == valor) {
-            return meio;
+            return valor;
         } else if (valorMeio < valor) {
             return buscaRecursiva(array, meio+1, fim, valor);
         } else {
