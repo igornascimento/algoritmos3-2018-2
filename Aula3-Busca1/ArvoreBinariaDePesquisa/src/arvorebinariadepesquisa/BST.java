@@ -9,12 +9,12 @@ package arvorebinariadepesquisa;
  *
  * @author 180503743
  */
-public class BST<K> {
+public class BST<K extends Comparable<K>, T> {
     
     /**
      * Node implementation
      */
-    public class Node<K> implements Comparable<T> {
+    public class Node<K> {
         private K key;
         private Node<K> left;
         private Node<K> right;
@@ -27,11 +27,6 @@ public class BST<K> {
             this.key = key;
             this.left = null;
             this.right = null;
-        }
-
-        @Override
-        public int compareTo(T o) {
-            return key.compareTo(o);
         }
     }
     
